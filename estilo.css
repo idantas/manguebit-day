@@ -1,0 +1,103 @@
+/* resets */
+* {padding: 0;margin: 0;box-sizing: border-box;list-style: none;transition: all .2s ease-out;}
+body {font-size: 62.5%}
+
+
+/* fonts */
+@font-face {src: url('fonts/Nunito-Regular.ttf');font-family: 'texto-normal'}
+@font-face {src: url('fonts/Nunito-Bold.ttf');font-family: 'titulos'}
+@font-face {src: url('fonts/Nunito-Light.ttf');font-family: 'texto-light'}
+
+/* communs */
+p, a, span, input, li, label {font-family: 'texto-normal', sans-serif;font-size: 1rem;color: #585555;}
+img{max-width: 100%;}
+.container {max-width: 800px;margin: 0 auto;width: 90%;padding: 1rem;}
+.titulo{font-family: titulos,sans-serif; font-size: 2rem; text-transform: uppercase; margin: 1rem 0;}
+.subtitulo{font-family: texto-normal,sans-serif; font-size: 1.5rem;font-weight: initial;margin: .5rem 0 1rem;}
+.flex {display: flex;align-items: center;}
+.flex.vertical{flex-direction: column; align-items: flex-start}
+.extremos {justify-content: space-between;}
+.relative {position: relative}
+.wrap {flex-wrap: wrap}
+
+/* cabecalho */
+header{height: 700px; background: url(img/bg-topo.png) no-repeat center; background-size: cover}
+.logo {max-width: 350px; padding: 1rem}
+.logo-topo{display: none}
+.menu-topo{ top: 0; padding:1rem .5rem; }
+
+.menu-topo li{ margin: 0 .2rem;}
+.menu-topo.container{max-width: 1400px;}
+.menu-topo ul a{
+    display:block;
+    padding: .5rem;
+    font-size: .8rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;    
+}
+.menu-topo a[title="Organização"],.menu-topo a[title="Inscrições"]{display: none}
+.menu-topo ul a:hover{text-decoration: underline}
+.box-interaction {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin: 5rem auto 0;
+}
+/* menu pos screen */
+.menu-topo.ativo{position:sticky; top: 0; background: #fff }
+.ativo .logo-topo{display: block}
+.ativo .logo{display:none}
+.menu-topo.ativo a[title="Organização"],.menu-topo.ativo a[title="Inscrições"]{display: none}
+
+#countdownie{color: #fff; font-family:texto-light,sans-serif; font-size:3rem; display: block;font-weight: 200;letter-spacing: 1.9px; margin: 2rem auto;}
+
+.button {padding: .8rem 2rem;color: #fff;text-decoration: none;border-radius: 50px;background-color: #db7c33;font-family: titulos,sans-serif;font-weight: 100;letter-spacing: 1px;text-transform: uppercase;}
+.box-interaction .button{margin:1.5rem auto; font-size: 1.3rem; padding: .8rem 2.5rem;}
+.box-interaction .button:hover{background-color: #934103; text-decoration: underline}
+
+.button-video img{
+    max-width: 40px;
+    margin-right: 1rem;
+    transform: scale(1)
+}
+.button-video.flex {
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.3rem;
+    margin: 10rem auto 0;
+    cursor: pointer;
+}
+.button-video:hover{ text-decoration:underline}
+.button-video:hover img{transform: scale(.85)}
+
+/* modal */
+.modal{
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: #000000e6;
+
+}
+.modal .conteudo{display: table;  width: 100%;max-width: 750px;}
+.close {
+    padding: 1rem;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top:1rem; right: 2rem;
+}
+.modal.ativo{opacity: 1; pointer-events: all}
+
+/* SOBRE */
+#sobre{background: #F8F8F8; padding: 3rem 0}
+#sobre .container{max-width: 800px;line-height: 2rem;}
+#sobre a[href*="manguez.al"]{margin: 2rem 0; display: block}
