@@ -16,27 +16,31 @@
     <!-- topo -->
     <header class="relative">
         <!-- menu superior -->
-        <menu class=" container menu-topo flex extremos">
-            <a href="index.html" class="logo-topo"><img src="img/logo-cor-menu-2018.png" alt="Mangue.bit 3.0"></a>
-            <!-- logo oficial -->
-            <figure class="logo">
-                <img src="img/logo-white-2018.png" alt="Mangue.bit 3.0">
-            </figure>
-            <ul class="flex wrap">
-                <li><a title="Convidados" href="#speakers">Convidados</a></li>
-                <li><a title="Agenda" href="#schedule">Agenda</a></li>
-                <li><a title="Inscrições" href="#pricing">Inscrições</a></li>
-                <li><a title="Patrocinadores" href="#sponsors">Patrocinadores</a></li>
-                <li><a title="Contato" href="#contato">Contato</a></li>
-                <li><a title="Organização" href="#organizacao">Organização</a></li>
-            </ul>
+        <menu class=" container menu-topo ">
+            <div class="flex extremos">
+                <a href="index.html" class="logo-topo"><img src="img/logo-cor-menu-2018.png" alt="Mangue.bit 3.0"></a>
+                <!-- logo oficial -->
+                <figure class="logo">
+                    <img src="img/logo-white-2018.png" alt="Mangue.bit 3.0">
+                </figure>
+                <span class="buttonMenu"></span>
+                <ul class="flex wrap">
+                    <li><a title="Convidados" href="#speakers">Convidados</a></li>
+                    <li><a title="Agenda" href="#schedule">Agenda</a></li>
+                    <li><a title="Inscrições" href="#ingresso">Inscrições</a></li>
+                    <li><a title="Patrocinadores" href="#sponsors">Patrocinadores</a></li>
+                    <li><a title="Contato" href="#contato">Contato</a></li>
+                    <li><a title="Organização" href="#organizacao">Organização</a></li>
+                </ul>
+
+            </div>
         </menu>
         <!-- menu-dots -->
         <nav class="menu-dots">
             <ul>
                 <li><a title="Convidados" href="#speakers"></a></li>
                 <li><a title="Agenda" href="#schedule"></a></li>
-                <li><a title="Inscrições" href="#pricing"></a></li>
+                <li><a title="Inscrições" href="#ingresso"></a></li>
                 <li><a title="Patrocinadores" href="#sponsors"></a></li>
                 <li><a title="Contato" href="#contato"></a></li>
                 <li><a title="Organização" href="#organizacao"></a></li>
@@ -280,11 +284,23 @@
             <div class="box">
                 <h2 class="subtitulo">PROGRAMAÇÃO</h2>
                 <ul class="box-agenda">
-                    <li><span class="horario"> 08:30h</span><p>Credenciamento</p>
+                    <li><span class="horario"> 08:30h</span>
+                        <div class="info">
+                            <p>Credenciamento</p>
+                            
+                        </div>
                     </li>
-                    <li><span class="horario"> 09:00h</span><p>Abertura</p>
+                    <li><span class="horario"> 09:00h</span>
+                        <div class="info">
+                            <p>Abertura</p>
+                            
+                        </div>
                     </li>
-                    <li><span class="horario"> 09:15h</span><p>In loco - Mindset Global</p>
+                    <li><span class="horario"> 09:15h</span>
+                        <div class="info">
+                            <p>In loco - Mindset Global</p>
+                            <span>André Ferraz</span>
+                        </div>
                     </li>
                     <li><span class="horario">10:00h</span><p>Open Innovation: Porto Digital</p>
                     </li>
@@ -403,7 +419,7 @@
     <footer class="rodape">
         <div class="redes-sociais">
             <a href="https://www.facebook.com/manguezalstartups/" target="_blank"><img src="img/facebook-logo-button.png"></a>
-            <a href="http://blog.manguez.al/" target="_blank"><img src="img/Monogram.png" ></a>
+            <a href="http://blog.manguez.al/" target="_blank"><img src="img/Monogram.jpg" ></a>
         </div>
         <a href="http://manguez.al/">Manguez.al - A Community of Startups. 2017.</a>
     </footer>
@@ -413,6 +429,10 @@
     crossorigin="anonymous"></script>
 
 <script>
+    $('.buttonMenu').on('click',function(){
+        $(this).parent().find('ul').toggleClass('ativo');
+    });
+
     $('.button-video').on('click', function () {
         $('.modal.video').addClass('ativo');
     });

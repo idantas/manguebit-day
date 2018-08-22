@@ -49,9 +49,11 @@ header{height: 700px; background: url(img/bg-topo.png) no-repeat center; backgro
     position: fixed;
     z-index: 9;
     top: 0;
+    max-width: inherit;
     background: #fff;
     width: 100%;
 }   
+.menu-topo > div{max-width: 1400px; margin:  0 auto}
 .ativo .logo-topo{display: block; max-width: 200px;}
 .menu-topo.ativo a{color: #223492}
 .ativo .logo{display:none}
@@ -130,7 +132,7 @@ header{height: 700px; background: url(img/bg-topo.png) no-repeat center; backgro
 
 /* AGENDA */
 #schedule {background: #F8F8F8; padding: 2rem 1rem; position: relative}
-.box-agenda li{display: flex; align-items: center; margin: 1rem 0}
+.box-agenda li{display: flex;align-items: flex-start;margin: 1rem 0;}
 .box-agenda{overflow: hidden; }
 .box{padding: 2rem 2rem;background: #fff;margin-bottom: 3rem; box-shadow: 0px 0px 7px -3px grey; border-radius: 5px ;position: relative; z-index: 1;}
 #schedule .button{margin: 2rem auto 0;
@@ -145,17 +147,29 @@ header{height: 700px; background: url(img/bg-topo.png) no-repeat center; backgro
     font-size: 1.1rem;
     font-weight: 100;}
 .box-agenda .horario{padding: .2rem .5rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border: 2px solid #db7c33;
-    margin-right: 1rem;
+    color: #db7c33;
     width: 90px;
-    transform:translateX(0);
-    text-align: center;}
-    .box-agenda p{font-size: 1.2rem; transform:translateX(0);}
-
+    height: 30px;
+    transform: translateX(0);
+    margin-right: 1rem;
+}
+    .box-agenda .info span {color: #838181;
+        font-size: .9rem;
+        letter-spacing: 1px;
+        margin-top: .3rem;
+        display: table;
+        background: #f2f2f2;
+    }
+    .box-agenda .info{ transform:translateX(0);}
+    .box-agenda p{font-size: 1.2rem;}
     .box-agenda li:hover span{transform:translateX(3%);}
     .box-agenda li:hover{cursor: default}
-    .box-agenda li:hover p{transform:translateX(-1%);}
+    .box-agenda li:hover .info{transform:translateX(-1%);}
 
     .bg{
         background: url(img/bg-topo.png) center;
@@ -215,4 +229,40 @@ header{height: 700px; background: url(img/bg-topo.png) no-repeat center; backgro
 
 }
 .redes-sociais a{overflow: hidden; width: 30px; height: 30px;display: block; border-radius: 100%; float: left; margin: 0 .5rem}
-.redes-sociais a[href*="blog"]{filter:saturate(0) brightness(3.9)}
+
+
+@media screen and (max-width:1100px){
+    .buttonMenu {
+        width: 35px;
+        height: 35px;
+        background: url(img/menu.png) no-repeat center;
+        display: block;
+        background-size: cover;
+        cursor: pointer;
+    }
+    .menu-topo{position: relative}
+    .menu-topo.ativo .buttonMenu{    filter: invert(1);}
+    .menu-topo ul{display: none; width: 100%}
+    .menu-topo ul.ativo{display: block; position: absolute; background: #fff; top: 100%; left: 0;}
+    .menu-topo ul.ativo a{padding: 1rem; color: #17235b; }
+}
+@media screen and (max-width:800px){
+    .lista-organizadores {grid-template-columns: repeat(3,1fr);grid-gap: 3rem 1rem;margin:  0 auto}
+    .lizta-speakers {grid-template-columns: repeat(3,calc(100% / 3 - 1rem)); margin:  0 auto; padding: 1rem}
+    .lizta-speakers img {    width: 100px;height: 100px;}
+    .flex.vertical.box-interaction {align-items: center;}
+    #countdownie {color: #fff;font-size: 2rem;}
+    
+}
+@media screen and (max-width:600px){
+    .infos .nome, .lista-organizadores .nome {font-size: 1rem;}
+    .box-interaction .button {font-size: 1rem;}
+    #schedule {padding: 2rem 0}
+    .box-agenda .horario {width: 70px;}
+    .box {padding: 1rem;}
+    .box-agenda p{font-size: 1rem}
+}
+@media screen and (max-width:500px){
+    .lista-organizadores {grid-template-columns: repeat(3,1fr);grid-gap: 3rem 1rem;margin:  0 auto}
+    .lizta-speakers {    grid-template-columns: repeat(2,calc(100% / 2 - 1rem));margin: 0 auto;padding: 1rem;}
+}
