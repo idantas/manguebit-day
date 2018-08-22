@@ -260,9 +260,14 @@ header{height: 700px; background: url(img/bg-topo.png) no-repeat center; backgro
     #schedule {padding: 2rem 0}
     .box-agenda .horario {width: 70px;}
     .box {padding: 1rem;}
+    .lizta-speakers li {padding: 1rem;height: inherit;}
     .box-agenda p{font-size: 1rem}
+    #fiquepordentro .mc-field-group {width: 100%;margin-bottom: 1rem;}
+    #fiquepordentro #mc_embed_signup_scroll {display: block;}
 }
 @media screen and (max-width:500px){
-    .lista-organizadores {grid-template-columns: repeat(3,1fr);grid-gap: 3rem 1rem;margin:  0 auto}
+    .lista-organizadores {grid-template-columns: repeat(2,1fr);grid-gap: 3rem 1rem;margin:  0 auto;     padding: 1rem 0;}
     .lizta-speakers {    grid-template-columns: repeat(2,calc(100% / 2 - 1rem));margin: 0 auto;padding: 1rem;}
+    .redes-sociais {display: table;margin: 0 auto 1rem;}
+    .rodape {flex-direction: column; text-align: center}
 }
